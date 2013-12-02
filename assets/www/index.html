@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <title>Hello World</title>
+        <style>
+            .track_but {
+                margin-top: 5px;
+                height: 20pt;
+                width: 70pt;
+                color: white;
+                font-weight:bold;
+                font-size: 15pt;
+                background-color: orange;
+                outline: solid;
+                outline-width:2px;
+                outline-color: white;
+                padding-top: 5px;
+                padding-bottom: -5px;
+                user-select: none;
+            }
+            .track_but:hover {
+                display:block;
+                margin-top: 5px;
+                height: 20pt;
+                width: 70pt;
+                color: black;
+                font-weight:bold;
+                font-size: 15pt;
+                background-color: white;
+                outline: solid;
+                outline-width:2px;
+                outline-color: white;
+                user-select: none;
+
+            }
+            .wrapTxt {
+                position: relative;
+            }
+            .wrapTxt .mask {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            #iframe {
+                zoom: 0.15;
+
+            }
+        </style>
+
+
+    </head>
+    <body style="background-color:darkorange" onLoad="onLoad()">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+         <script type="text/javascript" src="js/toast.js"></script>
+         <script type="text/javascript" src="js/statusbarnotification.js"></script>
+         <script type="text/javascript" src="css/locate.js"></script>
+
+
+        <div style="color:white; font-stretch:wider">India Mobile Number Locator</div>
+        <div style="color:white; font-size:300%; font-stretch:wider">Locate Mobile</div>
+        <div style="margin-top:20px; margin-left:20px">
+            <img src="img/slogo.png" alt="logo" style="width:10%; height:10% ; position:absolute;top:0px;right:5px"/>
+            <center>
+
+                <form >
+                    <label style="color:white;font-size:10pt;">Enter the 4 digit prefix of the mobile number:</label><br />
+                    <input type="number" maxlength="4" style="width:150pt;height:50pt;font-size:300%" oninput="locate()" id="phnum"/><br />
+                    <label style="color:gray; text-align:left">Ex : 9486</label><br />
+                    <div class="track_but wrapTxt mask" unselectable="on" onclick="locate()">Track</div>
+
+
+                </form>
+            </center>
+        </div>
+ </body>
+</html>
+
+
+
